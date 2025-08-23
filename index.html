@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <title>Aaliyah's Personal Website</title>
+    </head>
+    <body>
+        <nav>
+            <ul class="sideNav">
+                <li onclick=hideSideNav()><a href="#Welcome"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#Welcome">Welcome</a></li>
+                <li><a href="#AboutMe">About Me</a></li>
+                <li><a href="#Education">Education</a></li>
+                <li><a href="#Achievements">Achievements</a></li>
+                <li><a href="#Specializations">Specializations</a></li>
+                <li><a href="#Projects">Projects</a></li>
+            </ul>
+            <ul>
+                <li><a href="#Welcome">Logo</a></li>
+                <li class="hideOnMobile"><a href="#Welcome">Welcome</a></li>
+                <li class="hideOnMobile"><a href="#AboutMe">About Me</a></li>
+                <li class="hideOnMobile"><a href="#Education">Education</a></li>
+                <li class="hideOnMobile"><a href="#Achievements">Achievements</a></li>
+                <li class="hideOnMobile"><a href="#Specializations">Specializations</a></li>
+                <li class="hideOnMobile"><a href="#Projects">Projects</a></li>
+                <li class="menu" onclick=showSideNav()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+        </nav>
+        
+        <div class="mainPage">
+            <div>
+                    <a id = "AboutMe" class="headings">About Me</a>
+                    <div class= "wrapper">
+                        <div class="staticText" style="
+                        margin-right: 10px;
+                        margin-top: 3px; 
+                        color:black"> I'm a </div>
+                        <ul class="dynamicText">
+                            <li><span>Full Stack Developer</span></li>
+                            <li><span>Software Engineer</span></li>
+                            <li><span>Data Scientist</span></li>
+                            <li><span>Computer Scientist</span></li>
+                        </ul>
+                    </div> 
+            </div>
+            <div class="headshotContainer">
+                <img src = "images/headshot.jpeg" height="300" width="300" border-radius="20"
+                alt="Aaliyah's Headshot"> <br>
+                <div class="sideText" >
+                    Hello! My name is Aaliyah
+                    <br> Welcome to my website!
+                </div>
+                <div>
+                    <img src="images/contactMe.png" height="20" width="20"> Contact Me <br>
+                    <img src="images/mail_icon.png" height="20" width="20"> aaliyahlynnette@outlook.com <br>
+                    <img src="images/linkedIn_logo.png" height="20" width="20"> <a href="www.linkedin.com/in/aaliyahmccollum">linkedin.com/in/aaliyahmccollum</a> <br>
+                    <img src="images/github.png" height="30" width="30"> <a href="https://github.com/AaliyahMcCollum">github.com/AaliyahMcCollum</a>
+                </div>
+                
+            </div>
+            <!-- This is a comment-->
+            <div class="centeredText"> 
+                <div>
+                    <a id = "Education" class="headings">Education</a>
+                    <div class="education">
+                        <div class="educationItem1"><p class="educationTitles">CSU-San Bernadino <br>Jan 2024 - Dec 2025</p>
+                            <ul>
+                                <li>Bachelor of Science in Computer Science <br>Minor in Data Science</li>
+                                <li><strong>Cumulative GPA:</strong> 3.5</li> 
+                            </ul>
+                        </div>
+                        <div class="educationItem2"><p class="educationTitles">Moreno Valley College <br> Aug 2020 - Dec 2023 </p>
+                            <ul>
+                                <li>Associate of Science in Math and Science</li>
+                                <li>Associate of Arts Social and Behavioral Studies</li>
+                                <li>Associate in Science in Computer Science</li>
+                                <li> <strong>Cumulative GPA:</strong> 3.2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a id = "Achievements" class="headings">Awards & Achievements</a>
+                    <div class="achievements">
+                        <ul>
+                            <li style="
+                                grid-column: 1;
+                                grid-row: 1">
+                                Dean's List</li>
+                            <li style="
+                                grid-column: 2;
+                                grid-row: 1">
+                                AWT Women in STEM <br>Scholarship Recipient</li>
+                            <li style="
+                                grid-column: 3;
+                                grid-row: 1">
+                                ExCELS Scholarship Recipient</li>
+                            <li style="
+                                grid-column: 1;
+                                grid-row: 2">
+                                Assembly Ceritification</li>
+                            <li style="
+                                grid-column: 2;
+                                grid-row: 2">
+                                Udemy Python Certification</li>
+                            <li style="
+                                grid-column: 3;
+                                grid-row: 2">
+                                Udemy Web <br>Development Certification</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <ul><a id = "Specializations" class="headings">My Specializations</a>
+                        <li>
+                            Languages
+                            <p> I am profficient in Python, C++, Java, SQL, Assembly, R, HTML, CSS, JavaScript</p>
+                        </li>
+                        <li>Frameworks
+                            <p>I am also profficient in React</p>
+                        </li>
+                        <li>Developer Tools
+                            <p>Visual Studio, Spyder, Eclipse, MySQL, React, Firebase</p>
+                        </li>
+                        <li>Libraries
+                            <p>pandas, NumPy, Matplotlib, pygame, pickle, scikit-learn, Keras</p>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul> <a id = "Projects" class="headings">Projects</a>
+                        <li>
+                            This website
+                            <p>Made using Figma, VSCode, HTML, CSS, JavaScript</p>
+                        </li>
+                        <li>
+                            Spam Comment Detection
+                            <p>Implements Machine Learning Topics, Random Forest Model
+                                to detect spam comments
+                            </p>
+                        </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function showSideNav(){
+                const sidebar = document.querySelector('.sideNav')
+                sidebar.style.display = 'flex'
+            }
+            function hideSideNav(){
+                const sidebar = document.querySelector('.sideNav')
+                sidebar.style.display = 'none'
+            }
+        </script>
+    </body>
+</html>
