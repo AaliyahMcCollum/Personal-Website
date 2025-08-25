@@ -113,13 +113,20 @@ nav a:hover {
     }
 }
 
-.mainPage{
-    display: grid;
-    grid-template-columns: 50%, 50%;
+/* Main page two-column layout */
+.mainPage {
+    display: flex;
+    flex-direction: column;
 }
-.headshotContainer{
-    height: 700px;
-    width: 400px;
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+.headshotContainer {
+    flex: 0 0 30%;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
     border-radius: 20px;
     background-color: lightpink;
     justify-content: center;
@@ -128,7 +135,13 @@ nav a:hover {
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 20px;
-    
+    width: auto;
+    height: auto;
+}
+.rightContent {
+    color: black;
+    flex: 1;
+    padding-left: 20px;
 }
 
 .sideText{
