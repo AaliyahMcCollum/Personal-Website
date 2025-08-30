@@ -121,23 +121,58 @@ nav a:hover {
 .content {
     display: flex;
     margin-top: 20px;
+    margin-left: 20px;
 }
 .headshotContainer {
     flex: 0 0 30%;
+    flex-direction: column;
     position: sticky;
     top: 100px;
     align-self: flex-start;
+    align-items: center;      
+    justify-content: flex-start;
     border-radius: 20px;
     background-color: lightpink;
-    justify-content: center;
-    align-items: center;
     font-size: 15px;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 20px;
+    padding-right: 20px;
     width: auto;
     height: auto;
+    
 }
+.headshotContainer img {
+    display: block;
+    margin: 0 auto;
+}
+
+.linkText{
+    color: white;
+}
+
+.contactList{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-left: 0;
+    align-items: center;
+}
+
+.contactList li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.contactList img {
+    justify-content: center;
+    margin: 0px;
+}
+
 .rightContent {
     color: black;
     flex: 1;
