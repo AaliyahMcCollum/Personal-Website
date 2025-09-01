@@ -31,7 +31,6 @@
         
         <div class="mainPage">
             <header>
-                <a id = "AboutMe" class="headings">About Me</a>
                 <div class= "wrapper">
                     <div class="staticText" style="
                     margin-right: 10px;
@@ -65,7 +64,7 @@
                 <section class="rightContent">
                     <div class="centeredText"> 
                         <div>
-                            <a id = "Education" class="headings">Education</a>
+                            <a id = "Education" class="headings">Edu<span>cation</span></a>
                             <div class="education">
                                 <div class="educationItem1"><p class="educationTitles">CSU-San Bernadino <br>Jan 2024 - Dec 2025</p>
                                     <ul>
@@ -84,7 +83,7 @@
                             </div>
                         </div>
                         <div>
-                            <a id = "Achievements" class="headings">Awards & Achievements</a>
+                            <a id = "Achievements" class="headings">Awards <span>& Achievements</span></a>
                             <div class="achievements">
                                 <ul>
                                     <li style="
@@ -116,46 +115,64 @@
                         </div>
                         
                         <div>
-                            <ul><a id = "Specializations" class="headings">My Specializations</a>
+                            <ul><a id = "Specializations" class="headings">Specializ<span>ations</span></a>
                                 <li>
-                                    Languages
-                                    <p> I am profficient in Python, C++, Java, SQL, Assembly, R, HTML, CSS, JavaScript</p>
+                                    <ul class="languages">Languages
+                                        <li>Python</li>
+                                        <li>C++</li>
+                                        <li>Java</li>
+                                        <li>SQL</li>
+                                        <li>Assembly</li>
+                                        <li>R</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                    </ul>
                                 </li>
-                                <li>Developer Tools
-                                    <p>Visual Studio, Spyder, Eclipse, MySQL, React, Firebase</p>
+                                <li>
+                                    <ul class="developerTools">Developer Tools
+                                        <li>Visual Studio</li>
+                                        <li>Spyder</li>
+                                        <li>Eclipse</li>
+                                        <li>MySQL</li>
+                                        <li>React</li>
+                                        <li>Firebase</li>
+                                    </ul>
                                 </li>
-                                <li>Libraries
-                                    <p>pandas, NumPy, Matplotlib, pygame, pytorch, seaborn, scikit-learn, Keras</p>
+                                <li>
+                                    <ul class="libraries">
+                                        Libraries
+                                        <li>pandas</li>
+                                        <li>NumPy</li>
+                                        <li>Matplotlib</li>
+                                        <li>pygame</li>
+                                        <li>pytorch</li>
+                                        <li>seaborn</li>
+                                        <li>scikit-learn</li>
+                                        <li>Keras</li>
+                                    </ul>
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <ul> <a id = "Projects" class="headings">Projects</a>
-                                <li>
-                                    This website
+                        <div class="projectsCarousel">
+                            <a id = "Projects" class="headings">Pro<span>jects</span></a>
+                            <button class="carouselBtn prev"><</button>
+                            <div class="ProjGallery">
+                                <div class="ProjCard">This website
                                     <p>Made using Figma, VSCode, HTML, CSS, JavaScript</p>
-                                </li>
-                                <li>
-                                    Social Media Spam Comment Detection
-                                    <p>Implements Machine Learning model: Random Forest Model to classify if comments are spam by using features such as word count, number of letters in user name, etc.
+                                </div>
+                                <div class="ProjCard">Social Media Spam Comment Detection
+                                    <p>Implements Machine Learning model: Random Forest Model to classify if 
+                                        comments are spam by using features such as word count, number of letters in user name, etc.
                                     </p>
-                                </li>
-                        </ul>
+                                </div>
+                            </div>
+                            <button class="carouselBtn next">></button>
                         </div>
                     </div>
                 </section>
             </div>
         </div>
-        
-        <script>
-            function showSideNav(){
-                const sidebar = document.querySelector('.sideNav')
-                sidebar.style.display = 'flex'
-            }
-            function hideSideNav(){
-                const sidebar = document.querySelector('.sideNav')
-                sidebar.style.display = 'none'
-            }
-        </script>
+        <script src="js/script.js"></script>
     </body>
 </html>

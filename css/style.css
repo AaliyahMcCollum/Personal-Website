@@ -124,23 +124,41 @@ nav a:hover {
     margin-left: 20px;
 }
 .headshotContainer {
-    flex: 0 0 30%;
+    flex: 0 0 20%;
     flex-direction: column;
     position: sticky;
     top: 100px;
+    bottom: 50px;
     align-self: flex-start;
     align-items: center;      
     justify-content: flex-start;
     border-radius: 20px;
-    background-color: lightpink;
+    /*Background */
+    background-color: rgba(255, 192, 203, .25); /*Light pink w/ 25% opacity*/
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari */
+    border: 1px solid rgba(255, 192, 203, .4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .2);
+
     font-size: 15px;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
+    
     width: auto;
     height: auto;
+
     
+    
+}
+/* Dark mode version */
+@media (prefers-color-scheme: dark) {
+    .headshotContainer {
+        background: rgba(199, 21, 133, 0.3); /* dark pink/magenta tint */
+        border: 1px solid rgba(199, 21, 133, 0.5);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    }
 }
 .headshotContainer img {
     display: block;
@@ -148,15 +166,16 @@ nav a:hover {
 }
 
 .linkText{
-    color: white;
+    color: black;
 }
 
 .contactList{
     list-style: none;
     padding: 0;
     text-align: center;
-    margin-left: 0;
+    margin-left: 0px;
     align-items: center;
+    color: black;
 }
 
 .contactList li {
@@ -183,6 +202,7 @@ nav a:hover {
     margin: 10px;
     padding: 20px;
     font-size: 25px;
+    color: black;
 }
 
 #headshot{
@@ -191,12 +211,16 @@ nav a:hover {
 
 /*Centered Headings */
 .headings{
-    display: grid;
+    display: inline-block;
     font-size: 50px;
     font-weight: 500;
     text-align: center;
     width: 100%;
     justify-content: center;
+}
+
+.headings span{
+    color: pink;
 }
 /*Main Body of Website*/
 .wrapper{
@@ -320,6 +344,39 @@ nav a:hover {
     font-size: 30px;
 }
 
+.languages {
+    display: grid;
+    grid-template-columns: 50% , 50%;
+}
+
+#Specializations ul{
+    list-style: none;
+
+}
+/*Personal Projects */
+.projectsCarousel{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.ProjGallery{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto ;
+    scroll-behavior: smooth;
+    padding: 20px;
+}
+
+.carouselBtn{
+    background: rgba(255, 192, 203, .5);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    position: sticky;
+}
 
 /*Mobile Devices*/
 @media(max-width: 800px){
@@ -336,3 +393,4 @@ nav a:hover {
         width: 100%;
     }
 }
+
