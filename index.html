@@ -44,13 +44,20 @@
                     </ul>
                 </div> 
             </header>
-            <div class="content">
-                <aside class="headshotContainer">
-                    <img src = "images/headshot.jpeg" height="250" width="250" border-radius="20"
-                    alt="Aaliyah's Headshot"> <br>
-                    <div class="sideText" >
-                        Hello! My name is Aaliyah.
-                        <br> Welcome to my website!
+            <div class = "bodyContainer">
+                <div id="empty"> </div>
+                <div class="content headshotContainer">
+                    <!-- Headshot -->
+                    <div class="headshotItem liquid-glass-element">
+                        <img src = "images/headshot.jpeg" height="250" width="250" border-radius="20"
+                        alt="Aaliyah's Headshot"> <br>
+                    </div>
+                    <!-- Text Under Headshot -->
+                    <div class="headshotItem underSide">
+                        <img src="images/person_3.png" height = "50" width="50" class="liquid-glass-element ">
+                        <div class="headshotItem liquid-glass-element sideText">
+                            Aaliyah  
+                        </div>
                     </div>
                     <div>
                         <ul class="contactList">
@@ -60,118 +67,101 @@
                             <li><img src="images/github.png" height="30" width="30"> <a href="https://github.com/AaliyahMcCollum">github.com/AaliyahMcCollum</a></li>
                         </ul>
                     </div>
-                </aside>
-                <section class="rightContent">
-                    <div class="centeredText"> 
-                        <div>
-                            <a id = "Education" class="headings">Edu<span>cation</span></a>
-                            <div class="education">
-                                <div class="educationItem1"><p class="educationTitles">CSU-San Bernadino <br>Jan 2024 - Dec 2025</p>
-                                    <ul>
-                                        <li>B.S. Computer Science <br>Minor in Data Science</li>
+                </div>
+            
+                <div class="centeredText rightContent"> 
+                    <div>
+                        <a id = "Education" class="headings">Edu<span>cation</span></a>
+                        <div class="education">
+                            <div class="educationItem1"><p class="educationTitles">CSU-San Bernadino <br>Jan 2024 - Dec 2025</p>                                    <ul>
+                                <li>B.S. Computer Science <br>Minor in Data Science</li>
                                         
-                                    </ul>
-                                </div>
-                                <div class="educationItem2"><p class="educationTitles">Moreno Valley College <br> Aug 2020 - Dec 2023 </p>
-                                    <ul>
-                                        <li>A.S.  Math and Science</li>
-                                        <li>A.A. Social and Behavioral Studies</li>
-                                        <li>A.S. Computer Science</li>
-                                        
-                                    </ul>
-                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <a id = "Achievements" class="headings">Awards <span>& Achievements</span></a>
-                            <div class="achievements">
+                            <div class="educationItem2"><p class="educationTitles">Moreno Valley College <br> Aug 2020 - Dec 2023 </p>
                                 <ul>
-                                    <li style="
-                                        grid-column: 1;
-                                        grid-row: 1">
-                                        Dean's List</li>
-                                    <li style="
-                                        grid-column: 2;
-                                        grid-row: 1">
-                                        AWT Women in STEM <br>Scholarship Recipient</li>
-                                    <li style="
-                                        grid-column: 3;
-                                        grid-row: 1">
-                                        ExCELS Scholarship Recipient</li>
-                                    <li style="
-                                        grid-column: 1;
-                                        grid-row: 2">
-                                        Assembly Ceritification</li>
-                                    <li style="
-                                        grid-column: 2;
-                                        grid-row: 2">
-                                        Udemy Python Certification</li>
-                                    <li style="
-                                        grid-column: 3;
-                                        grid-row: 2">
-                                        Udemy Web <br>Development Certification</li>
+                                    <li>A.S.  Math and Science</li>
+                                    <li>A.A. Social and Behavioral Studies</li>
+                                    <li>A.S. Computer Science</li>
+                                        
                                 </ul>
                             </div>
                         </div>
-                        
-                        <div>
-                            <ul><a id = "Specializations" class="headings">Specializ<span>ations</span></a>
-                                <li>
-                                    <ul class="languages">Languages
-                                        <li>Python</li>
-                                        <li>C++</li>
-                                        <li>Java</li>
-                                        <li>SQL</li>
-                                        <li>Assembly</li>
-                                        <li>R</li>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>JavaScript</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul class="developerTools">Developer Tools
-                                        <li>Visual Studio</li>
-                                        <li>Spyder</li>
-                                        <li>Eclipse</li>
-                                        <li>MySQL</li>
-                                        <li>React</li>
-                                        <li>Firebase</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <ul class="libraries">
-                                        Libraries
-                                        <li>pandas</li>
-                                        <li>NumPy</li>
-                                        <li>Matplotlib</li>
-                                        <li>pygame</li>
-                                        <li>pytorch</li>
-                                        <li>seaborn</li>
-                                        <li>scikit-learn</li>
-                                        <li>Keras</li>
-                                    </ul>
-                                </li>
+                    </div>
+                    <div>
+                        <a id = "Achievements" class="headings">Awards <span>& Achievements</span></a>
+                        <div class="achievements">
+                            <ul>
+                                <li style="
+                                    grid-column: 1;
+                                    grid-row: 1">
+                                    Dean's List</li>
+                                <li style="
+                                    grid-column: 2;
+                                    grid-row: 1">
+                                    AWT Women in STEM <br>Scholarship Recipient</li>
+                                <li style="
+                                    grid-column: 3;
+                                    grid-row: 1">
+                                    ExCELS Scholarship Recipient</li>
+                                <li style="
+                                    grid-column: 1;
+                                    grid-row: 2">
+                                    Assembly Ceritification</li>
+                                <li style="
+                                    grid-column: 2;
+                                    grid-row: 2">
+                                    Udemy Python Certification</li>
+                                <li style="
+                                    grid-column: 3;
+                                    grid-row: 2">
+                                    Udemy Web <br>Development Certification</li>
                             </ul>
                         </div>
-                        <div class="projectsCarousel">
-                            <a id = "Projects" class="headings">Pro<span>jects</span></a>
-                            <button class="carouselBtn prev"><</button>
-                            <div class="ProjGallery">
-                                <div class="ProjCard">This website
-                                    <p>Made using Figma, VSCode, HTML, CSS, JavaScript</p>
-                                </div>
-                                <div class="ProjCard">Social Media Spam Comment Detection
-                                    <p>Implements Machine Learning model: Random Forest Model to classify if 
-                                        comments are spam by using features such as word count, number of letters in user name, etc.
-                                    </p>
-                                </div>
-                            </div>
-                            <button class="carouselBtn next">></button>
-                        </div>
                     </div>
-                </section>
+                    <div>
+                        <ul><a id = "Specializations" class="headings">Specializ<span>ations</span></a>
+                            <li>
+                                <ul class="languages">Languages
+                                    <li>Python</li>
+                                    <li>C++</li>
+                                    <li>Java</li>
+                                    <li>SQL</li>
+                                    <li>Assembly</li>
+                                    <li>R</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="developerTools">Developer Tools
+                                    <li>Visual Studio</li>
+                                    <li>Spyder</li>
+                                    <li>Eclipse</li>
+                                    <li>MySQL</li>
+                                    <li>React</li>
+                                    <li>Firebase</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="libraries">
+                                    Libraries
+                                    <li>pandas</li>
+                                    <li>NumPy</li>
+                                    <li>Matplotlib</li>
+                                    <li>pygame</li>
+                                    <li>pytorch</li>
+                                    <li>seaborn</li>
+                                    <li>scikit-learn</li>
+                                    <li>Keras</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
             </div>
+            
         </div>
         <script src="js/script.js"></script>
     </body>

@@ -6,7 +6,7 @@
 
 body {
     min-height: 100vh;
-    background-color: white; 
+    background-color: #ffebf1; 
     color: white;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -118,33 +118,45 @@ nav a:hover {
     display: flex;
     flex-direction: column;
 }
+
+.bodyContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 30%;
+}
 .content {
     display: flex;
+    flex-direction: column;
     margin-top: 20px;
     margin-left: 20px;
 }
 .headshotContainer {
+    position: fixed;
+    display: flex;
+    min-width: 25%;
+    max-width: 25%;
+    height: 75%
+}
+#empty {
+    width: 20px;
+}
+.headshotItem {
     flex: 0 0 20%;
     flex-direction: column;
-    position: sticky;
     top: 100px;
     bottom: 50px;
     align-self: flex-start;
     align-items: center;      
     justify-content: flex-start;
     border-radius: 20px;
-    /*Background */
-    background-color: rgba(255, 192, 203, .25); /*Light pink w/ 25% opacity*/
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Safari */
-    border: 1px solid rgba(255, 192, 203, .4);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, .2);
-
+    
     font-size: 15px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     
     width: auto;
     height: auto;
@@ -152,17 +164,27 @@ nav a:hover {
     
     
 }
+
+.underSide {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+}
 /* Dark mode version */
 @media (prefers-color-scheme: dark) {
-    .headshotContainer {
+    .headshotItem {
         background: rgba(199, 21, 133, 0.3); /* dark pink/magenta tint */
         border: 1px solid rgba(199, 21, 133, 0.5);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
     }
 }
-.headshotContainer img {
+.headshotItem img {
     display: block;
     margin: 0 auto;
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(255, 255, 255, 0.2); /* Depth and inner glow * */
+    opacity: 85%;
 }
 
 .linkText{
@@ -194,8 +216,10 @@ nav a:hover {
 
 .rightContent {
     color: black;
-    flex: 1;
+    
     padding-left: 20px;
+    
+    
 }
 
 .sideText{
@@ -377,7 +401,28 @@ nav a:hover {
     border-radius: 50%;
     position: sticky;
 }
+.liquid-glass-element {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(8px) saturate(180%); /* Frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(255, 255, 255, 0.2); /* Depth and inner glow */
+}
 
+.liquid-glass-element::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Subtle highlight */
+    border-radius: 16px;
+    opacity: 0.7;
+    filter: blur(1px) drop-shadow(5px 2px 3px black) brightness(120%); /* Shine and subtle shadow */
+    z-index: -1; /* Position behind the main element content */
+}
 /*Mobile Devices*/
 @media(max-width: 800px){
     .hideOnMobile{
