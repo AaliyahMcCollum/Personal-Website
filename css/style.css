@@ -19,7 +19,7 @@ body {
 
 /* Top Nav Bar CSS Styling */
 nav{
-   background-color: black;
+   background-color: #ff3773;
    opacity: 75%;
    box-shadow: 3px 3px 5px black; 
 }
@@ -43,19 +43,20 @@ nav li:first-child{
 nav a{
     padding: 10px;
     border-radius: 20px;
+    margin-right: 20px ;
     text-align: center;
     height: 100%;
     vertical-align: middle;
     text-decoration: none;
-    color: white;
+    color: black;
 
 }
 nav a:hover {
-    background-color: #555;
+    background-color: #ff3773;
     color: white;
 }
 .active {
-    background-color: #555;
+    background-color: #ff3773;
     color: white;
 }
 .menu{
@@ -185,7 +186,7 @@ nav a:hover {
     width: 100%;
     
 }
-/* Dark mode version */
+
 
 .headshotItem img {
     display: block;
@@ -279,8 +280,8 @@ nav a:hover {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: white;
-    border-left: 2px solid pink;
+    background-color: #ffebf1;
+    border-left: 2px solid #ff6090;
     animation: typeTitles 5s steps(19) infinite;
 }
 @keyframes typeTitles {
@@ -295,7 +296,7 @@ nav a:hover {
 
 .dynamicText li{
     list-style: none;
-    color: pink;
+    color: #ff6090;
     font-size: 30px;
     font-weight: 400;
     position: relative;
