@@ -367,78 +367,118 @@ nav a:hover {
 .achievements{
     display: grid;
     grid-template-columns: 30%, 30%, 30%;
-    grid-template-rows: 30%, 30%;
-    column-gap: 5px;
+    grid-template-rows: 20%, 20%;
+    column-gap: 20px;
     width: 100%;
     height: 600px;
     margin-left: 40px;
     margin-top: 20px;
+    justify-content: center;
+    
 
 }
 
 .achievements ul{
     display: grid;
     list-style: none;
+    align-items: center;
+   
 }
 
-/* .achievements li{
-    display: grid;
-    justify-content: center;
-    vertical-align: middle;
+.achievements li{
+    display: flex;
     align-items: center;
     text-align: center;
-    background-color: thistle;
-    width: 80%;
-    height: 70%;
-    border-radius: 10%;
-    font-size: 30px;
-} */
-
-.languages {
-    display: grid;
-    grid-template-columns: 50% , 50%;
+    justify-content: center;
+    width: 90%;
+    height: 50%;
+    font-size: 1.5rem;
 }
-
-#Specializations ul{
-    list-style: none;
-
-}
-/*Personal Projects */
-.projectsCarousel{
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.ProjGallery{
-    display: flex;
-    gap: 20px;
-    overflow-x: auto ;
-    scroll-behavior: smooth;
+/* Specializations */
+/* 3 Switchable Tabs -> JS */
+.specializations {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     padding: 20px;
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
 }
 
-.carouselBtn{
-    background: rgba(255, 192, 203, .5);
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    position: sticky;
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;   
 }
+
+.tabButton{
+    background-color: #ffb6c1;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.tabButton:hover {
+    background-color: #ff3773;
+    color: white;
+}
+
+.tabButton.active {
+    background-color: #ff3773;
+    color: white;
+}
+
+.tabContent {
+    display: none;
+    color: black;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.tabContent.active {
+    display: block;
+}
+
+.tabContent ul {
+    list-style: none;
+    padding: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+
+#languages {
+    display: inline-block;
+    list-style: none;
+}
+#developerTools {
+    display: inline-block;
+    list-style: none;
+}
+#libraries {
+    display: inline-block;
+    list-style: none;
+}
+
+/*Personal Projects */
+
+/* Liquid Glass CSS */
+
 .liquid-glass-element {
     background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
     backdrop-filter: blur(8px) saturate(180%); /* Frosted glass effect */
     border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
     border-radius: 16px; /* Rounded corners */
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 2px 8px rgba(255, 255, 255, 0.2); /* Depth and inner glow */
+    
 }
 
-
-
 .liquid-glass-element::after {
-    content: '';
     position:relative ;
     top: 0;
     left: 0;
@@ -450,7 +490,6 @@ nav a:hover {
     filter: blur(1px) drop-shadow(5px 2px 3px black) brightness(120%); /* Shine and subtle shadow */
     z-index: -1; /* Position behind the main element content */
 }
-
 
 /*Mobile Devices*/
 @media(max-width: 800px){
