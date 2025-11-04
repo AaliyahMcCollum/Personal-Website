@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
       //Add active class to clicked tab w/ content
       button.classList.add('active');
       const tabId = button.getAttribute('data-tab');
-      document.getElementById(tabId).classList.add('active');
+      const targetTab = document.getElementById(tabId);
+      if (targetTab) targetTab.classList.add('active');
     });
   });
 });

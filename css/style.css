@@ -432,13 +432,12 @@ nav a:hover {
 }
 
 .tabContent {
-    display: none;
-    color: black;
-    animation: fadeIn 0.4s ease-in-out;
+  display: none; /* hide all tab content by default */
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 .tabContent.active {
-    display: block;
+  display: block; /* only show the active tab */
 }
 
 .tabContent ul {
