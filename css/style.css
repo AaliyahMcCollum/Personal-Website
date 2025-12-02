@@ -513,6 +513,7 @@ nav a:hover {
     z-index: -1; /* Position behind the main element content */
 }
 
+
 /*Mobile Devices*/
 @media(max-width: 800px){
     .hideOnMobile{
