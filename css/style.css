@@ -156,7 +156,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: sticky; /* follow scroll */
+    position: relative; /* follow scroll */
     top: 100px;
     margin: 0;
     max-width: 400px;
@@ -515,12 +515,79 @@ nav a:hover {
 
 
 /*Mobile Devices*/
-@media(max-width: 800px){
+@media (max-width: 800px){
+    body {
+        padding-top: 60px;
+    }
+
+    nav ul {
+        justify-content: space-between;
+        padding: 15px;
+    }
+
     .hideOnMobile{
         display: none;
     }
     .menu{
         display: block;
+    }
+
+    .bodyContainer {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-right: 0;
+        gap: 30px;
+    }
+
+    .headshotContainer {
+        position: static;
+        top: auto;
+        max-width: 90%;
+    }
+
+    .headshotContainer.shrink img {
+        transform: scale(0.75);
+    }
+
+    .rightContent {
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .typewriter {
+        font-size: 48px;
+        padding-top: 20px;
+        animation: none;
+        border-right: none;
+        width: auto;
+    }
+
+    .headings {
+        font-size: 32px;
+    }
+
+    .sideText {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .education {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .achievements {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    .projectContainer {
+        margin-bottom: 100px;
     }
 }
 
@@ -528,5 +595,25 @@ nav a:hover {
     .sideNav{
         width: 100%;
     }
+    
+    .typewriter {
+        font-size: 36px;
+    }
+
+    .wrapper .staticText,
+    .dynamicText li {
+        font-size: 20px;
+    }
+
+    .projectCard {
+        width: 260px;
+        height: auto;
+    }
 }
 
+@media (min-width: 801px) {
+    .headshotContainer {
+        position: sticky;
+        top: 100px;
+    }
+}
