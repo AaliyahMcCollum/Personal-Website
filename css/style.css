@@ -156,7 +156,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* follow scroll */
+    position: sticky; /* follow scroll */
     top: 100px;
     margin: 0;
     max-width: 400px;
@@ -472,9 +472,11 @@ nav a:hover {
 /*Personal Projects */
 .projectContainer {
     display: flex;
-    overflow-x: scroll;
-    flex-flow: row nowrap;
-    scrollbar-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding-bottom: 10px;
     margin-top: 50px;
     margin-bottom: 200px;
 }
@@ -520,18 +522,6 @@ nav a:hover {
         padding-top: 60px;
     }
 
-    nav ul {
-        justify-content: space-between;
-        padding: 15px;
-    }
-
-    .hideOnMobile{
-        display: none;
-    }
-    .menu{
-        display: block;
-    }
-
     .bodyContainer {
         flex-direction: column;
         align-items: center;
@@ -546,8 +536,16 @@ nav a:hover {
         max-width: 90%;
     }
 
-    .headshotContainer.shrink img {
-        transform: scale(0.75);
+    #profileIcon img{
+        width: 50px;
+        height: 50px;
+    }
+    .headshotContainer.shrink .headshotItem img {
+        transform: scale(0.50);
+    }
+
+    .headshotItem img {
+        transition: transform 0.3s ease;
     }
 
     .rightContent {
@@ -565,6 +563,8 @@ nav a:hover {
 
     .headings {
         font-size: 32px;
+        margin-top: 40px;
+        text-align: center;
     }
 
     .sideText {
@@ -581,9 +581,16 @@ nav a:hover {
     .achievements {
         display: flex;
         flex-direction: column;
-        height: auto;
-        margin-left: 0;
-        gap: 20px;
+        height: 350px;
+        margin-left: 25px;
+        gap: 30px;
+    }
+
+
+    .achievements li {
+        font-size: 1.15rem;
+        height: 125px;
+        margin: 5px;
     }
 
     .projectContainer {
@@ -608,12 +615,5 @@ nav a:hover {
     .projectCard {
         width: 260px;
         height: auto;
-    }
-}
-
-@media (min-width: 801px) {
-    .headshotContainer {
-        position: sticky;
-        top: 100px;
     }
 }
