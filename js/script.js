@@ -7,6 +7,17 @@ function hideSideNav(){
     sidebar.style.display = 'none';
 } 
 
+
+window.addEventListener("load", () => {
+  const hand = document.querySelector("#heading img");
+  hand.classList.add("wave-on-load");
+
+  hand.addEventListener("animationend", () => {
+    hand.classList.remove("wave-on-load");
+  }, { once: true });
+});
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const tabButtons = document.querySelectorAll('.tabButton');
   const tabContents = document.querySelectorAll('.tabContent');
@@ -25,3 +36,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+

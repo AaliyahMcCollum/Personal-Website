@@ -98,7 +98,29 @@ nav a:hover {
 }
 
 #heading img{
-    margin-right: 20px;
+    margin-right: 30px;
+    transform-origin: 70% 70%;
+    will-change: transform;
+}
+
+#heading img.wave-on-load{
+    animation: handWave 2s ease-in-out 1;
+}
+
+#heading img:hover{
+    animation: handWave 2s ease-in-out 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #heading img,
+    #heading img.wave-on-load,
+    #heading img:hover {
+        animation: none;
+    }
+}
+
+#heading p{
+    align-self: center;
 }
 
 @keyframes typing {
@@ -117,6 +139,16 @@ nav a:hover {
     }
 }
 
+@keyframes handWave{
+    0% {transform: rotate(-0.05turn); }
+    15% {transform: rotate(0turn); }
+    30% {transform: rotate(-0.08turn); }
+    45% {transform: rotate(0turn); }
+    60% {transform: rotate(-0.08turn); }
+    75% {transform: rotate(0turn); }
+    90% {transform: rotate(-0.05turn); }
+    100% {transform: rotate(0turn);}
+}
 /* Main page two-column layout */
 .mainPage {
     display: flex;
@@ -196,27 +228,44 @@ nav a:hover {
 .contactList{
     list-style: none;
     padding: 0;
-    text-align: center;
-    align-items: center;
-    color: black;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
 }
 
 .contactList a{
-    padding-left: 10px;
-
-}
-
-.contactList li {
-    display: flex;
+    /* Equal-sized clickable area so all icons center evenly */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    text-align: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
 }
 
+.contactList a:hover{
+    transform: translateY(-1px);
+}
+
+
 .contactList img {
-    justify-content: center;
-    margin: 0px;
+    display: block;
+    margin: 0;
+    margin-bottom: 20px;
+    
+    /* Subtle glow under icons */
+    filter: drop-shadow(0 6px 10px rgba(255, 55, 115, 0.20));
+    transition: filter 0.2s ease;
+}
+
+/* Slightly stronger glow on hover */
+.contactList a:hover img {
+    filter: drop-shadow(0 8px 14px rgba(255, 55, 115, 0.30));
 }
 
 .aboutMe{
