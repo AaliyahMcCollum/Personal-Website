@@ -34,7 +34,7 @@ nav{
 nav ul{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     list-style: none;
     padding-top: 25px;
@@ -92,7 +92,7 @@ nav a:hover {
 #heading{
     color: black;
     font-size: 40px;
-    margin-left: 400px;
+    margin-left: 600px;
     margin-bottom: 100px;
     display: flex;
 }
@@ -528,18 +528,52 @@ nav a:hover {
     padding-bottom: 10px;
     margin-top: 50px;
     margin-bottom: 200px;
+    padding-left: 20px;
+    padding-bottom: 20px;
 }
 
 .projectCard {
     flex-shrink: 0;
     margin-right: 1rem;
-    width: 300px;
-    height: 400px;
+    width: 450px;
+    height: 550px;
     background-color: lightgray;
     border-radius: 8px;
     padding: 1rem;
+    transition: 
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    
 }
 
+.projectCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.50),
+    0 10px 20px rgba(255, 55, 115, 0.5);
+}
+
+.projectCard img {
+    height: 300px;
+    width: 100%;
+    border-radius: 2%;
+}
+
+.projectCard li {
+    background-color: rgb(255, 55, 115);
+    display: inline-block;
+    color: white;
+    border-radius: 30px;
+    line-height: 25px;
+    padding: 5px;
+    min-width: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.projectCard li:hover{
+    background-color: #ffb6c1;
+    color: black;
+}
 /* Liquid Glass CSS */
 
 .liquid-glass-element {
