@@ -37,3 +37,23 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// Projects Container
+
+const container = document.querySelector('.projectContainer');
+const leftArrow = document.querySelector('.arrow.left');
+const rightArrow = document.querySelector('.arrow.right');
+
+const scrollAmount = () => {
+  const card = container.querySelector('.projectCard');
+  return card.offsetWidth + 10;
+
+};
+
+rightArrow.addEventListener('click', () => {
+  container.scrollBy({ left: scrollAmount(), behavior: 'smooth'})
+})
+
+leftArrow.addEventListener('click', () => {
+  container.scrollBy({ left: -scrollAmount(), behavior: 'smooth'})
+})
