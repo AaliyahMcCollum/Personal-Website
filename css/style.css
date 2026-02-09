@@ -89,6 +89,13 @@ nav a:hover {
 
 }
 
+#Welcome,
+#Education,
+#Specializations,
+#Projects {
+  scroll-margin-top: 120px;
+}
+
 #heading{
     color: black;
     font-size: 40px;
@@ -519,6 +526,10 @@ nav a:hover {
 
 
 /*Personal Projects */
+.includeArrows {
+    position: relative;
+    --arrowW: clamp(36px, 6vw, 80px);
+}
 .projectContainer {
     display: flex;
     position: relative;
@@ -542,9 +553,10 @@ nav a:hover {
 .arrow {
     position: absolute;
     z-index: 20;
-    top: 47.5%;
+    top: 0;
     width: 50px;
-    height: 39.5%;
+    height: 100%;
+    bottom: 0;
     border: none;
     border-radius: 0;
     font-size: 10px;
@@ -568,7 +580,7 @@ nav a:hover {
 }
 .arrow.right {
     right: 0px;
-    margin-left: auto;
+
     background: linear-gradient(
         to left,
          rgba(255, 55, 115, 0.10),
@@ -584,8 +596,8 @@ nav a:hover {
     );
     box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.25);
 }
-.arrow.left {
-    left: 38%
+.arrow.left.includeArrows {
+    left:0%
 }
 
 
